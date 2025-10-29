@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EuroDairy — Hero Slider</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- ---------- PREMIUM FOOTER ---------- -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="index.min.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="nav-wrap" id="siteHeader">
+    <nav class="nav container">
+      <!-- Left -->
+      <div class="nav-left">
+        <img src="https://via.placeholder.com/160x50?text=EuroDairy" alt="EuroDairy logo" class="logo" id="logoImg">
+      </div>
+
+      <!-- Center links -->
+      <ul class="nav-center" id="navLinks">
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+
+      <!-- Right controls -->
+      <div class="nav-right">
+        <button class="search-btn" id="searchBtn" aria-label="Search">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zM4 9.5C4 6.46 6.46 4 9.5 4S15 6.46 15 9.5 12.54 15 9.5 15 4 12.54 4 9.5z"/></svg>
+        </button>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-layer" id="heroLayer"></div>
+
+    <div class="slides" id="slides">
+
+      <!-- Slide 1 -->
+      <article class="slide active" data-index="0">
+        <div class="slide-inner">
+          <h1>Modern European Dairy Equipment</h1>
+          <p>Reliable solutions for efficient, sustainable dairy farming.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#">View Products</a>
+            
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 2 -->
+      <article class="slide" data-index="1">
+        <div class="slide-inner">
+          <h1>Precision Milking Systems</h1>
+          <p>Improve yield, animal welfare and operational efficiency.</p>
+          <div class="hero-cta">
+            
+            <a class="btn ghost" href="#">Get A Quote</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Slide 3 -->
+      <article class="slide" data-index="2">
+        <div class="slide-inner">
+          <h1>End-to-End Farm Support</h1>
+          <p>Installation, maintenance and local training — we’re with you.</p>
+          <div class="hero-cta">
+            <a class="btn primary" href="#">Our Services</a>
+            
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- progress lines -->
+    <div class="progress-indicators" id="progressIndicators">
+      <button class="progress-slot" data-index="0"></button>
+      <button class="progress-slot" data-index="1"></button>
+      <button class="progress-slot" data-index="2"></button>
+    </div>
+  </section>
+
+<section class="products-section">
+  <div class="products-header">
+    <h2>Our Advanced Equipment & Solutions</h2>
+    <p>Designed for modern dairy farms | reliable, efficient, and built to last.</p>
+  </div>
+
+  <div class="product-cards">
+    <!-- Card 1 -->
+    <div class="product-card">
+      <div class="card-image" style="background-image: url('images/eq\ \(1\).jpg');"></div>
+      <div class="card-content">
+        <h3>Automated Milking Machines</h3>
+        <p>Precision systems that boost yield & hygiene.</p>
+        <a href="/products/milking-machines" class="product-btn">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card">
+      <div class="card-image" style="background-image: url('images/eq\ \(2\).jpg');"></div>
+      <div class="card-content">
+        <h3>Milk Cooling & Storage Tanks</h3>
+        <p>Premium tanks to maintain milk freshness.</p>
+        <a href="/products/cooling-tanks" class="product-btn">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card">
+      <div class="card-image" style="background-image: url('images/eq\ \(3\).jpg');"></div>
+      <div class="card-content">
+        <h3>Farm Automation Solutions</h3>
+        <p>Integrate technology for seamless operations.</p>
+        <a href="/products/automation" class="product-btn">Learn More</a>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card">
+      <div class="card-image" style="background-image: url('images/eq\ \(4\).jpg');"></div>
+      <div class="card-content">
+        <h3>Cow Comfort & Hygiene Systems</h3>
+        <p>Improve welfare, reduce infections, boost productivity.</p>
+        <a href="/products/comfort" class="product-btn">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="about-parallax">
+  <div class="about-bg"></div>
+  <div class="about-overlay">
+    <div class="about-inner">
+      <div class="about-left">
+        <h2>Discover Who We Are</h2>
+        <p>We craft meaningful experiences that blend creativity, innovation, and purpose — shaping digital ideas that truly connect.</p>
+      </div>
+      <a href="about.html" class="about-btn">Learn More</a>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="why-choose-us" >
+  <div class="container">
+    <div class="why-header" >
+      <h2>Why Choose EuroDairy?</h2>
+      <p>Premium European tech. Local support you can trust. Farming smarter, together.</p>
+    </div>
+
+    <div class="features-custom-layout">
+      <div class="feature feature-1" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon">💎</div>
+        <h3>European Quality</h3>
+        <p>Engineered for performance and built to last — every product meets the highest European standards.</p>
+      </div>
+
+      <div class="feature feature-2" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon">⚡</div>
+        <h3>Reliable Delivery</h3>
+        <p>Fast and secure equipment delivery with seamless setup and support.</p>
+      </div>
+
+      <div class="feature feature-3" data-aos="zoom-in" data-aos-delay="300">
+        <div class="icon">🤝</div>
+        <h3>Dedicated Expert Support</h3>
+        <p>Our team ensures smooth installation, comprehensive training, and 24/7 after-sales service to keep your operations running efficiently.</p>
+      </div>
+
+      <div class="feature feature-4">
+        <div class="content">
+          <h3>Committed to Sustainability</h3>
+          <p>Eco-friendly systems, reduced waste, and smarter energy use — because the future of dairy depends on it.</p>
+          <a href="/about" class="btn primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-cta">
+  <div class="cta-bg"></div>
+
+  <div class="cta-content">
+    <h2>Ready to take your dairy farm to the next level?</h2>
+    <p>Let’s turn your dairy dreams into reality — one milking system at a time!</p>
+    <a href="contact.html" class="cta-btn">Let’s Talk</a>
+  </div>
+</section>
+
+
+<footer class="fd-footer" role="contentinfo" aria-label="EuroDairy footer">
+  <div class="fd-container">
+    <div class="fd-top">
+      <div class="fd-col fd-brand" data-aos="fade-right">
+        <img src="https://via.placeholder.com/180x60?text=EuroDairy" alt="EuroDairy logo" class="fd-logo" />
+        <p class="fd-blurb">European dairy technology — handcrafted for farms that demand reliability, efficiency and care. We build systems that care for your herd and your future.</p>
+
+        <div class="fd-socials" aria-label="Social links">
+          <a href="#" aria-label="Facebook" class="social"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="Instagram" class="social"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn" class="social"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube" class="social"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+
+      <div class="fd-col fd-links" data-aos="fade-up">
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/products">Products</a></li>
+          <li><a href="/solutions">Solutions</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/about">About Us</a></li>
+        </ul>
+      </div>
+
+      <div class="fd-col fd-resources" data-aos="fade-up" data-aos-delay="100">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/support">Support</a></li>
+          <li><a href="/blog">News & Insights</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="fd-col fd-cta" data-aos="fade-left">
+        <div class="fd-cta-box">
+          <h4>Stay in the loop</h4>
+          <p class="muted">Get short, useful updates — product launches, tips and farm stories.</p>
+
+          <form class="fd-news" action="#" method="POST" onsubmit="return false;" aria-label="Subscribe to newsletter">
+            <label for="fd-email" class="sr-only">Email address</label>
+            <input id="fd-email" type="email" placeholder="Your email address" required>
+            <button type="submit" class="btn-ghost">Subscribe</button>
+          </form>
+
+          <div class="policies">
+            <a href="/privacy">Privacy Policy</a>
+            <a href="/newsletter-policy">Newsletter Policy</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- /fd-top -->
+
+    <hr class="fd-divider" />
+
+    <div class="fd-bottom">
+      <p class="copyright">© <span id="year"></span> EuroDairy Equipment Ltd — All rights reserved.</p>
+      <nav class="fd-legal" aria-label="Legal links">
+        <a href="/terms">Terms</a>
+        <a href="/cookies">Cookies</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- Transition overlay -->
+<div id="page-transition">
+  <div class="corner corner-top-left"></div>
+  <div class="corner corner-top-right"></div>
+  <div class="corner corner-bottom-left"></div>
+  <div class="corner corner-bottom-right"></div>
+
+  <div class="logo-wrapper">
+    <img src="mains/logo2.png" alt="Eurodairy Logo">
+  </div>
+</div>
+
+
+
+
+  <script src="index.min.js"></script>
+
+  <script>
+  // inject year
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+  <script>
+  window.addEventListener('scroll', () => {
+    const header = document.getElementById('siteHeader');
+    if (window.scrollY > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  });
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1200,  // Animation duration
+    once: false,      // Animate only once
+    easing: 'ease-out-cubic'
+  });
+</script>
+
+
+<!-- Include Lenis (CDN or npm) -->
+<script src="https://unpkg.com/@studio-freight/lenis@1.0.35/dist/lenis.min.js"></script>
+
+ <script>
+const isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+const lenis = new Lenis({
+  duration: isTouch ? 2.8 : 1.6, // smoother on phones, faster on desktop
+  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+  smooth: true,
+  smoothTouch: true
+});
+
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  </script>
+
+
+<script defer>
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll("a");
+  const transition = document.getElementById("page-transition");
+
+  // Handle back/forward cache
+  window.addEventListener("pageshow", (event) => {
+    const fromHistory =
+      event.persisted ||
+      window.performance.getEntriesByType("navigation")[0]?.type === "back_forward";
+    if (fromHistory) transition.classList.remove("active");
+  });
+
+  links.forEach(link => {
+    const href = link.getAttribute("href");
+    if (href && !href.startsWith("#") && !href.startsWith("http")) {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        transition.classList.add("active");
+
+        // Keep overlay for ~4 seconds
+        setTimeout(() => {
+          window.location.href = href;
+        }, 4000);
+      });
+    }
+  });
+});
+</script>
+
+
+</body>
+</html>
+
