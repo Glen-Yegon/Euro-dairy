@@ -8,6 +8,9 @@
       {
         "button-name": "off"
       }
-    ]
+    ],
+    "compat-api/css": "off",
+    "no-inline-styles": "off",
+    "compat-api/html": "off"
   }
 }

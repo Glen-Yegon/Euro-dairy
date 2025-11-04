@@ -7,9 +7,9 @@
 */
 
 const IMAGE_PATHS = [
-  'images/anita-jankovic-c7PT4PZMcNA-unsplash.jpg',
-  'images/jakob-cotton-K1hwkV5GPl0-unsplash.jpg',
-  'images/leon-ephraim-AxoNnnH1Y98-unsplash.jpg'
+  'images/optimized/e19.webp',
+  'images/optimized/e16.webp',
+  'images/optimized/e21.webp'
 ];
 
 const SLIDE_DURATION = 4000;
@@ -164,3 +164,30 @@ window.addEventListener('scroll', () => {
   }
 });
 
+
+
+const menuToggle = document.getElementById("menuToggle");
+const slideMenu = document.getElementById("slideMenu");
+const overlayBg = document.getElementById("overlayBg");
+const btnClose = document.getElementById("btnClose");
+
+// Open menu
+menuToggle.addEventListener("click", () => {
+  slideMenu.classList.add("active");
+  overlayBg.classList.add("active");
+  menuToggle.classList.add("active");
+});
+
+// Close menu
+btnClose.addEventListener("click", () => {
+  slideMenu.classList.remove("active");
+  overlayBg.classList.remove("active");
+  menuToggle.classList.remove("active");
+});
+
+// Close by clicking overlay
+overlayBg.addEventListener("click", () => {
+  slideMenu.classList.remove("active");
+  overlayBg.classList.remove("active");
+  menuToggle.classList.remove("active");
+});

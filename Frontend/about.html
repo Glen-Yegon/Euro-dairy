@@ -15,21 +15,23 @@
   <header class="header">
     <nav class="navbar">
       <div class="logo">
-        <img src="images/logo.png" alt="Euro Dairy Logo" />
+        <img src="images/logo1 (1).jpg" alt="Euro Dairy Logo" />
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html" class="active">About</a></li>
-        <li><a href="products.html">Products</a></li>
-        <li><a href="services.html">Services</a></li>
+        <li><a href="work.html">Our Work</a></li>
+        <li><a href="services.html">Solutions</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <div class="nav-right">
         <a href="contact.html" class="contact-btn">Contact Us</a>
-        <div class="hamburger">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
+<!-- Hamburger button -->
+<button class="menu-toggle" id="menuToggle" aria-label="Open menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
       </div>
     </nav>
 
@@ -43,6 +45,26 @@
 </div>
 
   </header>
+      <!-- Overlay -->
+<div class="overlay-bg" id="overlayBg"></div>
+
+<!-- Side navigation -->
+<aside class="slide-menu" id="slideMenu">
+  <div class="menu-top">
+    <img src="images/logo1 (1).jpg" alt="Logo" class="slide-logo">
+    <button class="btn-close" id="btnClose" aria-label="Close menu">&times;</button>
+  </div>
+
+  <nav class="menu-links">
+    <ul>
+   
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Solutions</a></li>
+      <li><a href="work.html">Our Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</aside>
 
   <section class="our-story">
   <div class="story-container">
@@ -141,11 +163,12 @@
 </section>
 
 
+
 <footer class="fd-footer" role="contentinfo" aria-label="EuroDairy footer">
   <div class="fd-container">
     <div class="fd-top">
       <div class="fd-col fd-brand" data-aos="fade-right">
-        <img src="https://via.placeholder.com/180x60?text=EuroDairy" alt="EuroDairy logo" class="fd-logo" />
+        <img src="images/logo1 (18).png" alt="EuroDairy logo" class="fd-logo" />
         <p class="fd-blurb">European dairy technology — handcrafted for farms that demand reliability, efficiency and care. We build systems that care for your herd and your future.</p>
 
         <div class="fd-socials" aria-label="Social links">
@@ -159,10 +182,10 @@
       <div class="fd-col fd-links" data-aos="fade-up">
         <h4>Explore</h4>
         <ul>
-          <li><a href="/products">Products</a></li>
-          <li><a href="/solutions">Solutions</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/about">About Us</a></li>
+          <li><a href="services.html">Solutions</a></li>
+          <li><a href="work.html">Our Work</a></li>
+          <li><a href="about.html">About Us</a></li>
+         <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </div>
 
@@ -207,7 +230,6 @@
   </div>
 </footer>
 
-
 <!-- Transition overlay -->
 <div id="page-transition">
   <div class="corner corner-top-left"></div>
@@ -216,7 +238,7 @@
   <div class="corner corner-bottom-right"></div>
 
   <div class="logo-wrapper">
-    <img src="mains/logo2.png" alt="Eurodairy Logo">
+    <img src="images/logo1 (18).png" alt="Eurodairy Logo">
   </div>
 </div>
 
