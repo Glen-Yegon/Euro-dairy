@@ -7,9 +7,9 @@
 */
 
 const IMAGE_PATHS = [
-  'images/optimized/e19.webp',
-  'images/optimized/e16.webp',
-  'images/optimized/e21.webp'
+  'images/e19.jpg',
+  'images/e16.jpg',
+  'images/e21.jpg'
 ];
 
 const SLIDE_DURATION = 4000;
@@ -190,4 +190,52 @@ overlayBg.addEventListener("click", () => {
   slideMenu.classList.remove("active");
   overlayBg.classList.remove("active");
   menuToggle.classList.remove("active");
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
+  const leftBtn = document.querySelector('.nav-button.left');
+  const rightBtn = document.querySelector('.nav-button.right');
+  const pauseBtn = document.querySelector('.pause-button');
+
+  let current = 0;
+  let intervalId;
+  let paused = false;
+  const delay = 4000;
+
+  function show(index) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === index));
+    current = index;
+  }
+
+  function next() {
+    show((current + 1) % slides.length);
+  }
+
+  function prev() {
+    show((current - 1 + slides.length) % slides.length);
+  }
+
+  leftBtn.addEventListener('click', () => { prev(); resetInterval(); });
+  rightBtn.addEventListener('click', () => { next(); resetInterval(); });
+
+  pauseBtn.addEventListener('click', () => {
+    if (paused) { start(); pauseBtn.textContent = '▌▌'; }
+    else { stop(); pauseBtn.textContent = '▶'; }
+    paused = !paused;
+  });
+
+  function start() {
+    stop();
+    intervalId = setInterval(next, delay);
+  }
+  function stop() {
+    if (intervalId) clearInterval(intervalId);
+  }
+  function resetInterval() {
+    stop();
+    if (!paused) start();
+  }
+
+  show(0);
+  start();
 });
