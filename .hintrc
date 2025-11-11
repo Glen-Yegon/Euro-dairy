@@ -11,6 +11,7 @@
     ],
     "compat-api/css": "off",
     "no-inline-styles": "off",
-    "compat-api/html": "off"
+    "compat-api/html": "off",
+    "disown-opener": "off"
   }
 }

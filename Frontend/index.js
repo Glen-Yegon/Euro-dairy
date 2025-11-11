@@ -191,51 +191,32 @@ overlayBg.addEventListener("click", () => {
   overlayBg.classList.remove("active");
   menuToggle.classList.remove("active");
 });
-document.addEventListener("DOMContentLoaded", () => {
-  const slides = Array.from(document.querySelectorAll('.testimonial-slide'));
-  const leftBtn = document.querySelector('.nav-button.left');
-  const rightBtn = document.querySelector('.nav-button.right');
-  const pauseBtn = document.querySelector('.pause-button');
 
-  let current = 0;
-  let intervalId;
-  let paused = false;
-  const delay = 4000;
+const cards = document.querySelectorAll('.product-card');
+const modal = document.querySelector('.modal-overlay');
+const modalImage = document.querySelector('.modal-image');
+const modalTitle = document.querySelector('.modal-title');
+const modalDetails = document.querySelector('.modal-details');
+const modalClose = document.querySelector('.modal-close');
 
-  function show(index) {
-    slides.forEach((s, i) => s.classList.toggle('active', i === index));
-    current = index;
-  }
-
-  function next() {
-    show((current + 1) % slides.length);
-  }
-
-  function prev() {
-    show((current - 1 + slides.length) % slides.length);
-  }
-
-  leftBtn.addEventListener('click', () => { prev(); resetInterval(); });
-  rightBtn.addEventListener('click', () => { next(); resetInterval(); });
-
-  pauseBtn.addEventListener('click', () => {
-    if (paused) { start(); pauseBtn.textContent = '▌▌'; }
-    else { stop(); pauseBtn.textContent = '▶'; }
-    paused = !paused;
+cards.forEach(card => {
+  const btn = card.querySelector('.product-btn');
+  btn.addEventListener('click', e => {
+    e.preventDefault();
+    // Get image from card
+    const imageUrl = card.querySelector('.card-image').style.backgroundImage;
+    modalImage.style.backgroundImage = imageUrl;
+    modalTitle.textContent = card.getAttribute('data-title');
+    modalDetails.textContent = card.getAttribute('data-details');
+    modal.style.display = 'flex';
   });
+});
 
-  function start() {
-    stop();
-    intervalId = setInterval(next, delay);
-  }
-  function stop() {
-    if (intervalId) clearInterval(intervalId);
-  }
-  function resetInterval() {
-    stop();
-    if (!paused) start();
-  }
+modalClose.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
 
-  show(0);
-  start();
+// Close modal when clicking outside content
+modal.addEventListener('click', e => {
+  if (e.target === modal) modal.style.display = 'none';
 });
