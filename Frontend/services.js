@@ -1,16 +1,12 @@
-// NAVBAR SCROLL EFFECT
-window.addEventListener("scroll", () => {
-  const navbar = document.querySelector(".navbar");
-  navbar.classList.toggle("scrolled", window.scrollY > 50);
-});
-
-// HAMBURGER MENU TOGGLE
-const hamburger = document.querySelector(".hamburger");
-const navLinks = document.querySelector(".nav-links");
-
-hamburger.addEventListener("click", () => {
-  navLinks.classList.toggle("show");
-});
+// mobile nav toggle
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+if(navToggle && navLinks){
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+}
 
 
 const menuToggle = document.getElementById("menuToggle");

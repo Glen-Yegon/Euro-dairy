@@ -37,48 +37,35 @@ overlayBg.addEventListener("click", () => {
   menuToggle.classList.remove("active");
 });
 
-
 const slider = document.querySelector('.testimonial-slider');
 const nextBtn = document.querySelector('.next');
 const prevBtn = document.querySelector('.prev');
 
 let index = 0;
+const slides = document.querySelectorAll('.testimonial-card');
 
 function showSlide(idx) {
-  const slides = document.querySelectorAll('.testimonial-card');
-  const slider = document.querySelector('.testimonial-slider');
-
   if (idx >= slides.length) idx = 0;
   if (idx < 0) idx = slides.length - 1;
   index = idx;
 
-  const slide = slides[index];
-  const slideOffset = slide.offsetLeft;
-  const slideWidth = slide.offsetWidth;
-  const sliderWidth = slider.clientWidth;
-
-  // Scroll so the card is centered
-  const scrollPos = slideOffset - (sliderWidth / 2) + (slideWidth / 2);
+  const slideWidth = slides[0].offsetWidth;
   slider.scrollTo({
-    left: scrollPos,
+    left: slideWidth * index,
     behavior: 'smooth'
   });
 }
 
-
 // Next & Previous
 nextBtn.addEventListener('click', () => {
-  index++;
-  showSlide(index);
+  showSlide(index + 1);
 });
 
 prevBtn.addEventListener('click', () => {
-  index--;
-  showSlide(index);
+  showSlide(index - 1);
 });
 
 // Auto Slide every 8 seconds
 setInterval(() => {
-  index++;
-  showSlide(index);
+  showSlide(index + 1);
 }, 8000);

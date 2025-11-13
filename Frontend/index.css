@@ -643,7 +643,7 @@ border-radius: 60px; transform: scale(1.1); }
 
 /* Background Image with Parallax Effect */
 .about-bg {
-  background-image: url('images/eq\ \(4\).jpg'); /* change if needed */
+  background-image: url('images/e16.jpg'); /* change if needed */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -922,7 +922,7 @@ border-radius: 60px; transform: scale(1.1); }
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background-image: url('images/optimized/jakob-cotton-K1hwkV5GPl0-unsplash.webp'); /* replace with actual image */
+  background-image: url('images/e17.jpg'); /* replace with actual image */
   background-size: cover;
   background-position: center;
   filter: brightness(0.8);
@@ -1558,6 +1558,26 @@ backdrop-filter: blur(10px);
     font-size: 0.9rem;
   }
 }
+
+.logo-below {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.logo-below img {
+  height: 85px;
+  width: auto;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 8px 14px;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.image-panel {
+  position: relative; /* Add this so the logo positions correctly */
+}
+
 
 
 .quick-facts {
