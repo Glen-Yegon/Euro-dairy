@@ -328,7 +328,87 @@ body { font-family: 'Inter', sans-serif; background: #fff; }
   }
 }
 
+/* Parlor Section */
+.milking-parlors {
+  background: #fff;
+  padding: 60px 20px;
+  font-family: 'Poppins', sans-serif;
+}
 
+.parlor-section {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.parlor-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2rem;
+  color: #000000;
+  margin-bottom: 30px;
+  font-weight: 700;
+  position: relative; /* Needed for the pseudo-element */
+}
+
+/* Small underline with fading edges */
+.parlor-title::after {
+  content: "";
+  display: block;
+  width: 100px; /* Width of the underline */
+  height: 4px; /* Thickness */
+  background: linear-gradient(to right, transparent, #000000, transparent);
+  margin: 8px auto 0; /* Centered horizontally and slight spacing below the text */
+  border-radius: 2px; /* Rounded edges for smooth fade */
+}
+
+
+.parlor-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.image-wrapper {
+  flex: 1 1 45%;
+  max-width: 500px;
+  overflow: hidden;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 350px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.image-wrapper:hover {
+  box-shadow: 0 12px 36px rgba(0,0,0,0.18);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .parlor-images {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .parlor-title {
+    font-size: 1.5rem;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+  }
+}
 
 /* CTA SECTION */
 .cta-section {
