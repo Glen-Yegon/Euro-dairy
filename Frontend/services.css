@@ -557,6 +557,181 @@ body {
 
 
 
+.catalog-section {
+  background: #ffffff;
+  padding: 80px 24px;
+}
+
+.catalog-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.catalog-text h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  color: #1fa6eb;
+  margin-bottom: 16px;
+}
+
+.catalog-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.05rem;
+  color: #000;
+  line-height: 1.6;
+  max-width: 520px;
+}
+
+.catalog-actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.catalog-btn {
+  font-family: 'Inter', sans-serif;
+  padding: 12px 26px;
+  font-size: 0.95rem;
+  border-radius: 6px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.catalog-btn.primary {
+  background: #1fa6eb;
+  color: #fff;
+  border: none;
+}
+
+.catalog-btn.primary:hover {
+  background: #1fa6eb;
+}
+
+.catalog-btn.outline {
+  border: 1.5px solid #1fa6eb;
+  color: #1fa6eb;
+  background: transparent;
+}
+
+.catalog-btn.outline:hover {
+  background: #1fa6eb;
+  color: #fff;
+}
+
+.catalog-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Compact, professional document-style card */
+.preview-card {
+  width: 200px;
+  height: 260px;
+  border: 1px solid #e2e6ea;
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  background: linear-gradient(to top, #1fa6eb, white);
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Subtle professional hover */
+.preview-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.1);
+}
+
+/* PDF badge */
+.preview-card span {
+  align-self: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: #1fa6eb;
+  border: 1px solid #1fa6eb;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Title */
+.preview-card h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  color: #000;
+}
+
+/* Description */
+.preview-card p {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.85rem;
+  color: #000000;
+  margin: 0;
+}
+
+/* Modal */
+.catalog-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.6);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.catalog-modal-content {
+  width: 90%;
+  height: 90%;
+  background: #fff;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.catalog-modal iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.close-modal {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+  .catalog-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .catalog-text p {
+    margin: auto;
+  }
+
+  .catalog-actions {
+    justify-content: center;
+  }
+}
 
 
 

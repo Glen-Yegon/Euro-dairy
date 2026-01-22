@@ -34,3 +34,20 @@ overlayBg.addEventListener("click", () => {
   overlayBg.classList.remove("active");
   menuToggle.classList.remove("active");
 });
+
+
+const openBtn = document.getElementById("openCatalog");
+const modal = document.getElementById("catalogModal");
+const closeBtn = document.querySelector(".close-modal");
+
+openBtn.addEventListener("click", () => {
+  modal.style.display = "flex";
+});
+
+closeBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});

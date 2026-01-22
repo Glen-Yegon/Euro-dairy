@@ -158,18 +158,19 @@ Ready to transform your dairy farm? Our team is here to help.
     <div class="contact-form">
       <h2>Request Free Consultation</h2>
       <p>We'll discuss your operation, equipment recommendations, pricing, installation, and training programs.</p>
-      <form id="contactForm">
-        <input type="text" name="fullName" placeholder="Full Name" required>
-        <input type="text" name="farmName" placeholder="Farm Name" required>
-        <input type="text" name="phone" placeholder="Phone Number" required>
-        <input type="email" name="email" placeholder="Email" required>
-        <input type="text" name="location" placeholder="Location / County" required>
-        <input type="number" name="numberOfCows" placeholder="Number of Cows" required>
-        <input type="text" name="equipment" placeholder="Equipment Interested In" required>
-        <input type="text" name="milkingMethod" placeholder="Current Milking Method" required>
-        <input type="text" name="bestTime" placeholder="Best Time to Call" required>
-        <button type="submit">Submit Request</button>
-      </form>
+<form id="contactForm">
+  <input type="text" name="fullName" placeholder="Full Name" required>
+  <input type="text" name="farmName" placeholder="Farm Name" required>
+  <input type="text" name="phone" placeholder="Phone Number" required>
+  <input type="email" name="email" placeholder="Email" required>
+  <input type="text" name="location" placeholder="Location / County" required>
+  <input type="number" name="numberOfCows" placeholder="Number of Cows" required>
+  <input type="text" name="equipment" placeholder="Equipment Interested In" required>
+  <input type="text" name="milkingMethod" placeholder="Current Milking Method" required>
+  <input type="text" name="bestTime" placeholder="Best Time to Call" required>
+  <button type="submit">Submit Request</button>
+</form>
+
     </div>
   </div>
 </section>
@@ -231,7 +232,7 @@ Ready to transform your dairy farm? Our team is here to help.
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-answer">
-        <p>Absolutely! Free farm consultations are available.</p>
+        <p>Absolutely! Farm consultations are available.</p>
       </div>
     </div>
 
@@ -241,7 +242,7 @@ Ready to transform your dairy farm? Our team is here to help.
         <span class="faq-toggle">+</span>
       </button>
       <div class="faq-answer">
-        <p>Yes, a comprehensive inventory is always in stock. For detailed answers, visit our office or call us.</p>
+        <p>Yes, a comprehensive inventory is always in stock. For detailed answers, visit our office, call us or view our catalog.</p>
       </div>
     </div>
 
@@ -287,7 +288,7 @@ Ready to transform your dairy farm? Our team is here to help.
   <a href="https://www.facebook.com/eurodairy/?utm_source=chatgpt.com" aria-label="Facebook" class="social">
     <i class="fab fa-facebook-f"></i>
   </a>
-  <a href="https://www.instagram.com/explore/locations/1096215677087440/eurodairy-equipment-ltd/?utm_source=chatgpt.com" aria-label="Instagram" class="social">
+  <a href="https://www.instagram.com/euro.dairyequipment?igsh=MTM2d25kZGt2NGEzZQ==" aria-label="Instagram" class="social">
     <i class="fab fa-instagram"></i>
   </a>
   <a href="https://www.linkedin.com/company/eurodairy-equipment-ltd/" aria-label="LinkedIn" class="social">
@@ -384,7 +385,7 @@ Ready to transform your dairy farm? Our team is here to help.
 </div>
 
 
-  <script src="contact.min.js"></script>
+  <script src="contact.js"></script>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
@@ -393,6 +394,49 @@ Ready to transform your dairy farm? Our team is here to help.
     once: false,      // Animate only once
     easing: 'ease-out-cubic'
   });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const contactForm = document.getElementById("contactForm");
+
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Explicitly read values (most reliable)
+    const fullName = contactForm.fullName.value.trim();
+    const farmName = contactForm.farmName.value.trim();
+    const phone = contactForm.phone.value.trim();
+    const email = contactForm.email.value.trim();
+    const location = contactForm.location.value.trim();
+    const numberOfCows = contactForm.numberOfCows.value.trim();
+    const equipment = contactForm.equipment.value.trim();
+    const milkingMethod = contactForm.milkingMethod.value.trim();
+    const bestTime = contactForm.bestTime.value.trim();
+
+    const message =
+` *New Consultation Request*
+
+ Name: ${fullName}
+ Farm: ${farmName}
+ Phone: ${phone}
+ Email: ${email}
+ Location: ${location}
+ Number of Cows: ${numberOfCows}
+ Equipment Interest: ${equipment}
+ Milking Method: ${milkingMethod}
+ Best Time to Call: ${bestTime}
+`;
+
+    const phoneNumber = "254711463207";
+    const whatsappURL = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+    window.open(whatsappURL, "_blank");
+
+    // Optional: reset form after opening WhatsApp
+    contactForm.reset();
+  });
+});
 </script>
 
 
