@@ -35,7 +35,7 @@ overlayBg.addEventListener("click", () => {
   menuToggle.classList.remove("active");
 });
 
-
+/*
 const openBtn = document.getElementById("openCatalog");
 const modal = document.getElementById("catalogModal");
 const closeBtn = document.querySelector(".close-modal");
@@ -51,3 +51,4 @@ closeBtn.addEventListener("click", () => {
 modal.addEventListener("click", (e) => {
   if (e.target === modal) modal.style.display = "none";
 });
+ */
